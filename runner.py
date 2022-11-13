@@ -1,3 +1,4 @@
+# Created as part of "CS50's Introduction to Artificial Intelligence with Python"
 import pygame
 import sys
 import time
@@ -34,7 +35,7 @@ while True:
     # Let user choose a player.
     if user is None:
         # Draw title
-        title = largeFont.render("Play Tic-Tac-Toe", True, white)
+        title = largeFont.render("Noughts and Crosses", True, white)
         titleRect = title.get_rect()
         titleRect.center = ((width / 2), 50)
         screen.blit(title, titleRect)
