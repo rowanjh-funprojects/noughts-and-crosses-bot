@@ -25,7 +25,6 @@ scorePlayer = 0
 scoreAI = 0
 
 while True:
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
@@ -34,7 +33,6 @@ while True:
 
     # Let user choose a player.
     if user is None:
-
         # Draw title
         title = largeFont.render("Play Tic-Tac-Toe", True, white)
         titleRect = title.get_rect()
@@ -76,7 +74,6 @@ while True:
                 user = ttt.O
 
     else:
-
         # Draw game board
         tile_size = 80
         tile_origin = (width / 2 - (1.5 * tile_size),

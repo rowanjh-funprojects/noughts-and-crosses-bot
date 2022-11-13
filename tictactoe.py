@@ -10,8 +10,6 @@ X = "X"
 O = "O"
 EMPTY = None
 
-
-
 def count_board(board):
     x = 0
     o = 0
@@ -95,6 +93,7 @@ def terminal(board):
     else:
         return True
 
+
 def utility(board):
     """
     Returns 1 if X has won the game, -1 if O has won, 0 otherwise.
@@ -140,6 +139,7 @@ def minimax(board):
             values.append(this_action_value)
         return choose_action(actions_available, values, min(values))
 
+
 def MAXVALUE(state, alpha, beta):
     # Return the highest possible value of a given board state,
     # assuming that the opponent will play optimally
@@ -157,6 +157,7 @@ def MAXVALUE(state, alpha, beta):
             if beta <= alpha:  
                 break
         return maxV
+
 
 def MINVALUE(state, alpha, beta):
     # Return the lowest possible value of a given board state,
