@@ -21,6 +21,9 @@ user = None
 board = ttt.initial_state()
 ai_turn = False
 
+scorePlayer = 0
+scoreAI = 0
+
 while True:
 
     for event in pygame.event.get():
@@ -52,6 +55,14 @@ while True:
         playORect.center = playOButton.center
         pygame.draw.rect(screen, white, playOButton)
         screen.blit(playO, playORect)
+
+        # Draw score
+        scoreText1 = mediumFont.render(f"Your score: {scorePlayer}", True, white)
+        scoreText2 = mediumFont.render(f"AI score: {scoreAI}", True, white)
+
+        screen.blit(scoreText1, (width * 0.2, height * 0.8))
+        screen.blit(scoreText2, (width * 0.6, height * 0.8))
+
 
         # Check if button is clicked
         click, _, _ = pygame.mouse.get_pressed()
@@ -138,6 +149,11 @@ while True:
             if click == 1:
                 mouse = pygame.mouse.get_pos()
                 if againButton.collidepoint(mouse):
+                    winner = ttt.winner(board)
+                    if winner == user:
+                        scorePlayer += 1
+                    else :
+                        scoreAI += 1
                     time.sleep(0.2)
                     user = None
                     board = ttt.initial_state()
