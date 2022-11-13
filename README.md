@@ -1,5 +1,7 @@
 # Noughts and Crosses AI
-<img src="./img-readme.png" style='border: 1px solid #000'/>
+
+| ![Alt name of image](./img-readme.png) |
+|-|
 
 A bot that play Noughts and Crosses (tic-tac-toe). Play the game with `python runner.py`
 
