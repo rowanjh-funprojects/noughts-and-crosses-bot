@@ -147,10 +147,11 @@ while True:
                 mouse = pygame.mouse.get_pos()
                 if againButton.collidepoint(mouse):
                     winner = ttt.winner(board)
-                    if winner == user:
-                        scorePlayer += 1
-                    else :
-                        scoreAI += 1
+                    if winner is not None:
+                        if winner == user:
+                            scorePlayer += 1
+                        else:
+                            scoreAI += 1
                     time.sleep(0.2)
                     user = None
                     board = ttt.initial_state()
