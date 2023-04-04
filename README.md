@@ -12,4 +12,4 @@ The game is implemented in pygame, modified from code provided by "CS50's Introd
 To run:
 1. Clone the repo
 2. Ensure all dependencies are installed
-3. Play the game with `python runner.py`
+3. Play the game with the command `python runner.py`
